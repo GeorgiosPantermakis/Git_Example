@@ -12,4 +12,4 @@ git stash apply stash@{'Number'} ---> Apply the particular change but it does no
 git stash pop ---> Apply the stash@{0} change and then delete it
 git stash drop stash@{'Number'} ---> Delete the particulart stash@{'Number'}
 git stash clear ---> Delete all the stash@{} 
-git checkout -- . ---> Delete the changes of stage area 
+git checkout -- . ---> Delete the changes of unstaging area 
