@@ -13,3 +13,6 @@ git stash pop ---> Apply the stash@{0} change and then delete it
 git stash drop stash@{'Number'} ---> Delete the particulart stash@{'Number'}
 git stash clear ---> Delete all the stash@{} 
 git checkout -- . ---> Delete the changes of unstaging area 
+
+# Git and Visual Studio Code
+https://www.youtube.com/watch?v=F2DBSH2VoHQ&ab_channel=Ihatetomatoes
