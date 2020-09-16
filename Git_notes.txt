@@ -16,3 +16,87 @@ git checkout -- . ---> Delete the changes of unstaging area
 
 # Git and Visual Studio Code
 https://www.youtube.com/watch?v=F2DBSH2VoHQ&ab_channel=Ihatetomatoes
+
+#########################################################################################################################
+#########################################################################################################################
+#########################################################################################################################
+
+Source: https://www.youtube.com/watch?v=xuB1Id2Wxak&feature=emb_logo
+
+Create a repository
+# Click Git Bush Here
+# git init ---> Define your local repository
+# git remote add origin "<link>" ---> Connect the remote repository (GitHub) with your local repository
+# git pull origin master ---> Download all the files from remote repository (GitHub) to your local machine
+# git status ---> Gives you the status of the files in your local repository
+# git add <filename>.<filetype> ---> Add the particular file in the list of the files which will commited later
+# git add -A ---> Add all the files of local repository in the list of the files which will commited later
+# git commit -m "<message>" ---> Upload the <filename>.<filetype> in remote repository (GitHub)
+# git commit -a -m "<message>" ---> Upload all the files of local repository in remote repository (GitHub)
+# git log ---> Show the history of commited files
+# git branch Name_of_Branch ---> Create the Name_of_Branch
+# git checkout Name_of_Branch ---> Change the current branch with Name_of_Branch
+# git merge Name_of_Branch ---> Merge the Name_of_Branch with the current master branch
+# git rebase Name_of_Branch ---> Merge the Name_of_Branch with the current master branch
+# ssh-keygen ---> Generate a public ssh key in order to push my files to GitHub
+# ssh -T git@github.com ---> Authenticate succefully done.
+# git push origin Name_of_Branch ---> Upload all the files in the Name_of_Branch. If the Name_of_Branch does not exist, it will create it.
+# git checkout <the first 8 digits> <filename>.<filetype> ---> Insolate the particular version of the <filename>.<filetype> using the git log output.
+
+
+
+Git Tutorial 4: Basic Commands: add, commit, push
+Source: https://www.youtube.com/watch?v=eL_0Ok_Gkas&list=PLeo1K3hjS3usJuxZZUBdjAcilgfQHkRzW&index=4
+
+# git clone <link> ---> Download the content of a remote repository and save it in your current working directory.
+# git add <filename>.<filetype> ---> Add <filename>.<filetype> to staging area.  
+# git commit -m "<message>" ---> Add your changes to local version control database. (You have still not pushed these changes to remote server [GitHub])
+# git push ---> Push commited changes to remote server [GitHub]
+# git difftool HEAD ---> Shows difference between your local changes and previous version of the file
+# git status ---> Gives you the status of the files in your local repository
+# git log ---> Show the history of commited files
+# git add . ---> Add all the files of local repository in the list of the files which will commited later
+
+Git Tutorial 5: Undoing/Reverting/Resetting code changes
+Source: https://www.youtube.com/watch?v=3dk3s4LK-Wg&list=PLeo1K3hjS3usJuxZZUBdjAcilgfQHkRzW&index=5
+
+# git checkout -- <filename>.<filetype> ---> Returns the <filename>.<filetype> into the previous version for uncommited changes
+# git checkout -- . ---> Returns all the modified files into the previous version for uncommited changes
+# git revert <commit_id> ---> Reverting a previous version of the particular file using <commit_id> for commited changes
+# git revert -n <commit_id> ---> Reverting a previous version of the particular file using <commit_id> for commited changes but not commit it
+# git reset --hard <commit_id> ---> Delete all the history after the particular <commit_id>
+
+Git Tutorial 6: Branches (Create, Merge, Delete a branch)
+Source: https://www.youtube.com/watch?v=sgzkY5vFKQQ&list=PLeo1K3hjS3usJuxZZUBdjAcilgfQHkRzW&index=6
+
+# git branch ---> Display all the available branches (Note: The green color in a branch name means that it is an active branch)
+# git branch <Name_of_Branch> ---> Create a new branch called <Name_of_Branch> (The default branch is the master branch)
+# git checkout <Name_of_Branch> ---> Makes <Name_of_Branch> an active branch (Note: Essentially, the active branch is the current working directory)
+# git checkout -b <Name_of_Branch> ---> Create a new branch called <Name_of_Branch> and makes it active (It is the combination of the two above commands)
+# git merge <Name_of_Branch> ---> Merge <Name_of_Branch> branch into active branch
+# git push --set--upstream origin <Name_of_Branch> ---> Update the remote repository (GitHub) about the new branch named <Name_of_Branch>
+# git branch -d <Name_of_Branch> ---> Delete the particular branch
+
+Git Tutorial 7: What is HEAD?
+Source: https://www.youtube.com/watch?v=ZaI1co-rt9I&list=PLeo1K3hjS3usJuxZZUBdjAcilgfQHkRzW&index=7
+
+# git show HEAD ---> Display the most recent commit
+# git show <commit_id> ---> Display the commit named <commit_id>
+# git difftool <oldest_commit_id> <newest_commit_id> ---> Display the differences between the 2 commits
+# git difftool HEAD~2 HEAD~1 ---> Display the differences between the 2 commits (HEAD~0 point to most recent <commit_id>)
+
+Git Tutorial 8: .gitignore file
+Source: https://www.youtube.com/watch?v=ErJyWO8TGoM&list=PLeo1K3hjS3usJuxZZUBdjAcilgfQHkRzW&index=8
+# git touch .gitignore ---> Create a <filename>.gitignore in my current working directory [The content of this file will be with filename of files wanted to ignore]
+
+Git Tutorial 9: Diff and Merge using meld
+Source: https://www.youtube.com/watch?v=3Qynj8WUwgs&list=PLeo1K3hjS3usJuxZZUBdjAcilgfQHkRzW&index=9
+# git difftool ---> Show the differences between the uncommited changes and the HEAD
+# git difftool origin/master ---> Compare the content of the same file between local repository and remote repository (GitHub)
+# git difftool -t vidmiff ---> Use the vidmiff text editor
+# git difftool -t meld ---> Use the meld text editor
+# git mergetool ---> Compare the content of the same file between local repository, the merge content and remote repository (GitHub)
+[Requires to add some extra line in .gitconfig file]
+
+Git Github Tutorial 10: What is Pull Request?
+Source: https://www.youtube.com/watch?v=e3bjQX9jIBk&list=PLeo1K3hjS3usJuxZZUBdjAcilgfQHkRzW&index=10
