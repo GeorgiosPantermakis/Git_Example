@@ -1,4 +1,20 @@
 import json
+import string
+
+def number_of_placeholder(placeholder_info):
+    characters = string.ascii_lowercase + string.ascii_uppercase + ' '
+    start = 0
+    end = 1
+    num_of_placeholder = ""
+    while True:
+        if placeholder_info[start:end] not in characters:
+            num_of_placeholder += placeholder_info[start:end]
+            start += 1
+            end += 1 
+        else:
+            break
+    return int(num_of_placeholder)
+
 
 def read_data_json(filename):
     
