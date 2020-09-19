@@ -100,3 +100,10 @@ Source: https://www.youtube.com/watch?v=3Qynj8WUwgs&list=PLeo1K3hjS3usJuxZZUBdjA
 
 Git Github Tutorial 10: What is Pull Request?
 Source: https://www.youtube.com/watch?v=e3bjQX9jIBk&list=PLeo1K3hjS3usJuxZZUBdjAcilgfQHkRzW&index=10
+
+# Black Module notes
+Source: https://www.youtube.com/watch?v=ia19n_yK4Qs&ab_channel=YYAhn
+black -h ---> It shows a helpful menu about the functionalities of black modules
+black --diff <filename>.py ---> It shows you what it will change if you applied it in the <filename>.py
+type <filename>.py ----> It prints the content of the <filename>.py
+
