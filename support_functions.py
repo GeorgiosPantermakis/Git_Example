@@ -15,6 +15,15 @@ def number_of_placeholder(placeholder_info):
             break
     return int(num_of_placeholder)
 
+def frequency_table(dict):
+    freq_dict = {}
+    for key in dict.keys():
+        key_freq_dict = number_of_placeholder(key)
+        if key_freq_dict not in freq_dict.keys():
+            freq_dict[key_freq_dict] = 1
+        else:    
+            freq_dict[key_freq_dict] += 1
+    return freq_dict      
 
 def read_data_json(filename):
     

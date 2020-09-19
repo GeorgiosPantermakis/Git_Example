@@ -4,6 +4,7 @@ import getopt
 from support_functions import read_data_json
 from support_functions import store_data_json
 from support_functions import number_of_placeholder
+from support_functions import frequency_table
 
 step_forward = None
 starting_point = None
@@ -28,17 +29,25 @@ path = 'wire_up.json' if path is None else path
 data = read_data_json(filename = path)
 
 new_data = {}
-bounder = starting_point
+freq = frequency_table(data)
+counter = 0
 for key, value in data.items():
-    
+    counter += 1
     current_number_of_placeholder = number_of_placeholder(placeholder_info = key)
     if current_number_of_placeholder >= starting_point:
         new_number_of_placeholder = current_number_of_placeholder + step_forward
         placeholder = str(new_number_of_placeholder) + " " + key[len(str(current_number_of_placeholder))+1:]
         new_data[placeholder] = value
+        fake_placeholder = new_number_of_placeholder 
     else:
         placeholder = str(current_number_of_placeholder) + " " + key[len(str(current_number_of_placeholder))+1:]
         new_data[placeholder] = value
+        fake_placeholder = current_number_of_placeholder 
+
+    if freq[current_number_of_placeholder] == counter:
+        fake_placeholder = str(fake_placeholder)  + " Drop this textline"
+        new_data[fake_placeholder] = ""
+        counter = 0
 
 new_wire_up = store_data_json(content = new_data)
 filepath = os.getcwd() + "\\" + new_wire_up
