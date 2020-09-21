@@ -28,6 +28,16 @@ def frequency_table(dict):
     return freq_dict
 
 
+def add_spaces(placeholder):
+    if "Text" in placeholder:
+        spaces =  4 * " "
+    elif "Table" in placeholder:
+        spaces =  3 * " "
+    else:
+        spaces =  1 * " "
+    return spaces       
+
+
 def read_data_json(filename):
 
     # Opening JSON file
